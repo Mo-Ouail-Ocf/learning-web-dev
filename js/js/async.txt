@@ -1,0 +1,42 @@
+/***********************/
+sync:things happening together in the order set up.
+
+setTimeOut is an asynchronous function ,not synchronized
+with the rest of the code  , like ordering pizza 
+we dont wait , we do other things wheras the pizza is
+being prepared
+examples of async code:
+    fetching,backend api,loading files,time and intervals
+sync:blocks code until being executed while async doesnt
+/***************************/
+Promises:
+there are 
+
+        -promise maker:returns promise object
+        since async process takes unkown ammount of time , function needs to
+        return smth immediately,otherwise it returns unknown,instead returning data;
+        it returns the promise of some data
+            --->Promise object :takes a function of async logic;this latter
+            takes two parameters:one we call if the promise is sucsessfully fulfilled(resolve);
+            the other is failure of promise (reject).
+            -->three states of promise :pending(Waiting),success , failure
+        -promise receiver:calls the maker and do smth with the promise
+            getweather().then((data)=>{ //the data returned from resolve
+                log(data);
+            },(data)=>log('failure'))
+
+        getweather().then(onSuccess,OnError);
+        //these two are functions which by default the data
+        returned by resolve or reject as parameter
+
+        -->chaining Promises
+            promise1()
+            .then(promise2)
+            .then(OnSuccess,OnFailure)
+        
+
+            
+
+
+
+

@@ -1,0 +1,27 @@
+string.lengh;
+
+string.charat(6);
+
+string.indexof('hi'):first position//.lastindex the inverse
+
+string.slice(5,8);:return from index 5 to 8
+
+string.toLowercase (upper)
+
+string.includes("hi");:return bool or false
+
+string.split("t") :return aray of words in which the
+splitter  is 't'
+
+moy = 19;
+
+let mention =
+     moy>19  
+        ?  "excelent"
+        : moy>16
+        ? "tres bien"
+        : "nope";
+
+console.log(mention);
+
+string.trim(); retunr string without white spaces

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>first webpage</title>
+        <meta charset="UTF-8">
+        <meta name="author" content="Ouail">
+        <meta name="description" content="my 1st webpage">
+         <link rel="icon" href="html.png">
+         <link rel="stylesheet" href="main.css">
+    </head>
+
+    <body>
+    <header>
+        <h1>hello</h1>
+        <!--more than one nav :important to label them-->
+        <nav aria-label="primary-nav">            <ul>
+          <li><a href="#learn">Learning html</a>  </li>
+          <li><a href="#vocation">Plan for vocation</a></li>
+          <li><a href="#schedule">Daily schedule</a></li>
+          <li><a href="#contact">Contact me</a></li>
+
+
+            </ul>
+        </nav>
+    </header>
+    <hr>
+       <!-------------PARTIE 1-------------->
+    <main>
+    <article id="schedule">
+        <section>
+          <h2>learnig html</h2>
+          <figure>
+          <img src="img/html.png" alt="image html5"
+           title="Html 5"  >
+
+          </figure> 
+
+          <figure>
+            <figcaption>exmple of code</figcaption>
+            <p>
+                <code>
+                    &lt;h1&gt;hello world&lt;/h1&gt;
+                </code>
+            </p>
+          </figure>
+        </section>
+           <!--width and height are recomended-->
+        <section>
+          <h3>my daily schedule</h3>
+           <p>
+        <em>let me tell u how:</em></p>
+        <ol>
+       <li>&nbsp;...I learn about web dev</li>
+       <li>...I plan my schedule</li>
+       <li>...I use ressources from <abbr title="youtube"><a href="https://www.youtube.com/watch?v=kUMe1FH4CHE">ytb</a></abbr> </li>
+       </ol>
+
+       <aside>
+            <details>
+                <summary>
+                    Guess the <mark> number of hour I code per day </mark>
+                </summary>
+                <p>
+                  I start at <time datetime="08:00">8 am</time> 
+                  and  I write code for 3 hours every morning
+                </p>
+            </details>
+       </aside>
+       <br>
+       <!-----------TABLES-------------------->
+       <table>
+            <caption>Daliy schedule</caption>
+            <thead>
+            <tr>
+                <th>
+                    &nbsp;
+                </th>
+                <th scope="col">
+                    time
+                </th>
+                <th scope="col">
+                    activity
+                </th>
+            </tr>
+             </thead>
+             <tbody>
+            <tr>
+                <th scope="row">
+                    morning
+                </th>
+                <td>
+                    <time datetime="8:00">8am</time>-
+                    <time datetime="11:00">11am</time>             
+                 </td>
+                 <td>
+                    Write code 
+                 </td>
+            </tr>
+            <tr>
+                <th scope="row">
+                    Break
+                </th>
+                <td>
+                    <time datetime="11:00">11am</time>-
+                    <time datetime="12:00">12pm</time>             
+                 </td>
+                 <td>
+                    Eat lunch
+                 </td>
+            </tr>
+            <tr>
+                <th scope="row">
+                    Afternoon
+                </th>
+                <td>
+                    <time datetime="12:00">12pm</time>-
+                    <time datetime="17:00">5pm</time>             
+                 </td>
+                 <td>
+                    Study
+                 </td>
+            </tr>
+            <tr>
+                <th scope="row">
+                    Evening
+                </th>
+                <td rowspan="2">All other time</td>
+                <td> free time</td>
+                
+            </tr>
+            <tr>
+                <th scope="row">
+                    Night
+                </th>
+                <td>sleep</td>
+            </tr>
+            </tbody> 
+            <tfoot>
+             
+                <tr>
+                    <td colspan="3">
+                        that was my schedule
+                    </td>
+                </tr>
+            </tfoot>
+       </table>
+    </section>
+    </article>  
+        <hr>
+
+         <!-------------PARTIE 2-------------->
+    <article id="vocation"> 
+        <h2> Planning a vocation</h2>
+        <section>
+        <h3> places i'd like to go </h3>
+        <ul>
+        <li><p>Algiers</p></li> 
+        <figure>
+        <img src="img/nasro-azaizia-wQdI8pEVYP4-unsplash.jpg" 
+
+        alt="algiers" loading="lazy">
+        <figcaption>Algiers</figcaption>
+        </figure>    
+        <!--loading lazy so the browser load the image when we
+            we get close to the image-->
+        <p>here:</p>
+        <address>
+            <li>Setif </li>  
+            <li>Contantine </li> 
+            <li>Mexico</li>
+        </address>
+        </ul>
+    </section>
+        <section>
+        <h3>places i'd like to avoid</h3>
+         <dl>
+            <dt>North Pole</dt>
+            <dd>It is <em>cold</em></dd>
+            <dt>South pole</dt>
+            <dd>Also cold</dd>
+            <dt>Chelghoum</dt>
+            <dd>It has nothing</dd>
+         </dl>
+        </section>
+        </article> 
+        <hr>
+        <article id="Contact">
+            <h2>Contact me</h2>
+            <p>
+                I would like to hear from you
+            </p>
+            <p>
+            <form action="https:/httpbin.org/get" 
+            method="get">
+            <fieldset>
+           <legend>Personal Information</legend>
+            <label for="firstname">First name</label>
+            <input type="text" name="firstname" id="firstname"
+              placeholder="Ouail" autocomplete="on" required
+              >
+            </p>
+            <p>
+             <label for="lastname">Last name</label>
+             <input type="text" name="lastname" id="lastname"
+                placeholder="Oucherif" autocomplete="on" required> 
+            </p> 
+            <p>
+             <label for="password">Password</label>
+             <input type="password" name="password" id="password" placeholder="your secret"
+             required>      </p>
+             <p>
+                <label for="phone">phone</label>
+                <input type="tel" name="phone" id="phone"
+                 placeholder="555-555-5555" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                required>      
+            </p>
+              <p>
+                <label for="decade">Favorite decade</label>
+                <input type="number" name="decade" id="decade"
+                min="1950" max="2020" step="10" value="1980" required>      
+            </p> 
+            
+          <!--   <p>
+                <label for="coffee"> Favorite coffee</label>
+                <select name="coffee" id="coffee" multiple >
+                    <optgroup label="Coffees">
+                    <option value="regular">Regular coffee</option>
+                    <option value="iced">Iced coffee</option>
+                    </optgroup>
+                    <optgroup label="Espresso">
+                    <option value="latte">Latte</option>
+                    <option value="cappuccino">Cappuccino</option>
+                    <option value="cortado">Cortado</option>
+                    <option value="americano">Americano</option>
+                   </optgroup>
+                    <option value="other" selected>Other</option>
+                </select>
+            </p> -->
+            <p>
+                <label for="coffee">Favorite coffee</label>
+                <input type="text" name="coffee" id="coffee"
+                list="coffee-list">
+                <datalist id="coffee-list">
+                    <option value="Coffee"></option>
+                    <option value="Latte"></option>
+                    <option value="Iced Coffee"></option>
+                    <option value="Other"></option>                   
+                </datalist>
+            </p>
+              </fieldset> 
+              <fieldset>
+                <legend>Your favorite food</legend>
+                <p>
+                    <input type="radio" name="food"
+                     id="tacos">
+                    <label for="tacos">Tacos</label>    
+                </p>
+                <p>
+                    <input type="radio" name="food"
+                     id="pizza">
+                    <label for="pizza">Pizza</label>    
+                </p>
+                <p>
+                    <input type="radio" name="food"
+                     id="Other">
+                    <label for="Other">Other</label>    
+                </p>
+           </fieldset>
+           <fieldset>
+            <legend>Pets</legend>
+            <p>
+                <input type="checkbox" name="pet" 
+                id="fish">
+                <label for="fish">Fish</label>
+            </p>
+            <p>
+                <input type="checkbox" name="pet" 
+                id="Cat">
+                <label for="Cat">Cat</label>
+            </p>
+            <p>
+                <input type="checkbox" name="pet" 
+                id="No">
+                <label for="No">No</label>
+            </p>
+           </fieldset>
+           <fieldset>
+            <legend>Send a note</legend>
+            <label for="message">Message</label>
+            <br>
+            <textarea name="messgae" id="message" 
+            cols="30" rows="10"></textarea>
+            <br>
+           </fieldset>
+           
+           <button type="submit">Submit</button>
+           <button type="reset">Reset</button>
+            </form>
+        </article>
+        
+
+    
+       <!-------------PARTIE 3-------------->
+    </main>
+
+    <footer>
+        <hr>
+        &lt; &lt; &lt;&copy; <a href="about.html">Ouail Oucherif </a>&gt;&gt;&gt;
+        <p><a href="#">Back to top</a></p>
+    </footer>
+    </body>
+</html>

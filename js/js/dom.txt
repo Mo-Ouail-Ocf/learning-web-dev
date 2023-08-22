@@ -1,0 +1,69 @@
+let view1 = document.getElementById("view1");
+
+let view2 = document.querySelector("#view2");
+
+view1.style.display = "flex";
+
+view2.style.display= "none";
+
+let view = document.getElementsByClassName("view");
+
+let allviews = document.querySelectorAll(".view");
+
+let divs = view1.querySelectorAll("div");//node list
+
+let samedivs = view1.getElementsByTagName("div");//html collect
+
+let evendivs = view1.querySelectorAll("div:nth-of-type(2n)");
+
+for (let i=0;i<evendivs.length;i++){
+    evendivs[i].style.backgroundColor = "darkblue";       
+}
+
+let navtext = document.querySelector("nav h1");
+
+console.log(navtext);
+
+navtext.textContent = "Hello world";
+
+let navbar = document.querySelector("nav");
+
+navbar.innerHTML = `<h1>Hello ! </h1> <p> this should align right </p>` //change the html
+
+navbar.style.justifyContent = "space-betweeen";
+
+console.log(evendivs[0].parentElement.children);
+
+console.log(evendivs[0].parentElement.lastElementChild);//or first
+
+console.log(evendivs[0].parentElement.nextElementSibling);//or previous
+
+while (view2.lastChild){
+   view2.lastChild.remove();
+}
+
+
+const createdivs = (parent,iter) => {
+   let newdiv = document.createElement("div");
+   newdiv.textContent = iter ;
+   newdiv.style.backgroundColor = "#000";
+   newdiv.style.width = "100px";
+   newdiv.style.height ="100px";
+   newdiv.style.margin ="10px";
+   newdiv.style.display = "flex";
+   newdiv.style.justifyContent= "center";
+   newdiv.style.alignItems= "center";
+   parent.append(newdiv);
+}
+
+for (let i = 1; i <= 12; i++) {
+   createdivs(view2,i);   
+   return 
+}
+
+
+
+
+
+
+

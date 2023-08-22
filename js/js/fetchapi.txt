@@ -1,0 +1,14 @@
+fetch api requires:
+    -callbacks:fcts passed as args to other fcts,they
+    will be called aftr some time
+
+
+    -promises: they can have 3 states:
+        -pending :it can be pending while other code is executed
+                    two blockes exec in the same time
+        -fulfilled
+        -rejected
+
+    -thenaables
+
+    -async/await:

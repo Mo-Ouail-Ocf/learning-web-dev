@@ -1,0 +1,46 @@
+function pizzaFactory(pizzasize){
+    let crust = "original";
+    let size = pizzasize;
+    return{
+        bake :()=> console.log(`baking a ${size} ${crust} crust pizza`)
+    };
+}
+
+const Pizza = pizzaFactory("smal");
+Pizza.bake();
+/*****************************************/
+
+class SpecialyPizza extends Pizza {
+    constructor(size){
+        super(size);
+        this.type = "The works";
+    }
+    slice(){
+        console.log(`Our  ${this.type} ${this.size} pizza has 12 slices`);
+    }
+}
+
+/*****************************************/
+/* /*super class */
+class Pizza {
+    crust = "original";
+    #sauce = "traditional";
+    #size;
+    constructor(size){
+        this.#size = size;   
+    }
+    getpizzacrust(){
+        return this.crust;
+    }
+    setcrust(crust){
+        this.crust=crust;
+    }
+    hereyougo (){
+        console.log(`here is your ${this.crust} ${this.#sauce} ${this.#size} pizza`);
+    }
+}
+
+let mypizza = new Pizza("large");
+
+mypizza.hereyougo()
+

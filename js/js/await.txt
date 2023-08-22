@@ -1,0 +1,51 @@
+-await is only valid in async functions .
+
+-await let us call async funcs as if it was sync funcs
+
+1-async await must be used together //except:js modules
+2-async await only affevts promise receiver
+3-we can wait any fcts that retunrs a promise
+4-any funcs can be async 5-each async funcs returns a promise
+6-error handling with try/catch
+
+//async - await :
+
+start = async() =>{
+    let result = await fetch('https://api.weather.gov/gridpoints/OKX/35,35/forecast')
+    let data = await result.json()
+    console.log(data.properties.periods[1].shortForecast);
+}
+
+start()
+
+//promises :
+
+const getWeather = ()=>{
+        fetch('https://api.weather.gov/gridpoints/OKX/35,35/forecast')
+            .then(data => data.json())
+            .then(result=> console.log(result.properties.periods[1].shortForecast))
+    }
+getWeather()
+//////////////////////////////
+
+//error handling
+
+const getData = ()=>{
+    return new Promise((resolve,reject)=>{
+        setTimeout(() => {
+            reject('something went wrong')
+        }, 1)
+    })
+}
+
+const start2 = async()=>{
+    try {
+        let result = await getData()
+        //on sucsess
+
+    } catch(error) {
+        //failure
+        console.log(`${error}`);
+    }
+}
+start2()

@@ -1,0 +1,51 @@
+/*
+higher fct does one of these things:
+
+-takes one or more fcts as an args
+- retun a fct as a result
+
+*/
+import {posts} from "./posts.js"
+
+//
+/********* forEach() :call for an array **********/
+/*
+array.forEach(element=>{
+ //action on element
+})
+*/
+
+posts.forEach(post=>{
+    console.log(post);
+})
+
+console.clear();
+
+/******* filter() : find specific data from results */
+//in an array , it returns array of lets which verifies the property
+/*
+
+
+
+*/
+let filterPosts = posts.filter(post=>{
+    return post.userId ===5;
+})
+//this returns an array of users whose the userid is 1
+
+
+/***** map() :let trasnfrom the data ,it returns an array */
+let mapedPosts = filterPosts.map(post=>{
+    return post.id *10;
+    //each id is times 10 and return an arrays of these ids
+    //only 
+})
+
+/**** reduce():computes a single value from data */
+/*array.reduce(callbackfct(accumulator,current),initialvalueofacc)
+---->if not initial , acc take the first value
+*/
+let reducePostsValue = mapedPosts.reduce((sum,post)=>{
+    return sum+post;
+}) //not individual value post , we use accumulator
+console.log(reducePostsValue);

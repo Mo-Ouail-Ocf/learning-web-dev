@@ -1,0 +1,55 @@
+/* claass elt has more specifity
+than an element  
+*/
+
+/*
+Form elets do not inherit typo 
+inherits indide ====
+*/
+
+/*
+we can set color by rgb (255,0,0) :red
+*/
+/*Units
+rem,em
+px,%,ch
+vw viewport width
+vh viewport height
+*/
+/* rem:relative to the root defined by the browser */
+/* 1rem:16px;defined by the browser*/
+/*em:relative to the block element;the parent elemnt*/
+/* margin:top right bottom left */
+/*bprder :solid ; dashed ; dotted*;outset
+double;*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ } 
+.container {
+    border: 5px double red ;
+    font-size: 1.5rem;
+    margin: 1.5em;
+    /*top,bottom:1.5  left right:2 */
+    padding: 1.5em;
+    outline: 5px solid purple;
+    outline-offset: -20px;
+}
+
+.circle{
+    margin: 3rem auto;
+    background-color: gold;
+    width: 100px;
+    height: 100px;
+    border: 2px solid black;
+    border-radius: 50px;
+    outline: 2px solid red;
+    outline-offset: 0.25rem;
+
+}
+/*border radius :half of the width and height:
+gives u a circle
+*/
+
+

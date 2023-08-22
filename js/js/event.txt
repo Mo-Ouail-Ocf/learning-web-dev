@@ -1,0 +1,124 @@
+/******************/
+                add:
+element.addeventlistener(event,call back function,usecapture)
+event:"click"
+usecapture : false
+
+/***************/
+            remove
+elt.removeevent...( , , )
+
+
+//anonymous function
+h2.addeventlistener("click",(event)=>{
+    log(event.target);
+    event.target.textcontent = "clicked";
+}
+)
+/****************/
+
+
+/*******************************************************************/
+let grandparent = document.querySelector('.grandparent');
+let parent = document.querySelector('.parent');
+let child = document.querySelector('.child');
+
+grandparent.addEventListener('click',e =>{
+    console.log('grandparent');
+});
+
+
+parent.addEventListener('click',hi);
+
+setTimeout(()=>{
+    parent.removeEventListener("click",hi)
+},2000);
+
+child.addEventListener('click',e =>{
+    console.log('child');
+});
+
+//event listeners happen from the child to its parents
+//this is called bubbling : upward
+
+//the other way is capturing : starts from up to down, backward
+
+function hi (){
+    console.log("hi");
+}
+
+
+/***************************************/
+
+//event delegation
+
+function addGlobalEvent (type,selector,callback){
+    document.addEventListener(type,e=>{
+        if (e.target.matches(selector))
+        callback(e);
+    })
+}
+
+or : 
+
+
+/* 
+divs.forEach(div=>{
+    div.addEventListener('click',()=>{
+        console.log('hi');
+    })
+}) */
+
+
+/***********************************************************************/
+
+//event.stopPropagation(); :stops bubbling or capturing
+
+//event.target : for "click"; it is the lement
+//in which we clicked , then for bubbling 
+/*it will start propagating and changing on
+the element based on what is in its parents
+*/
+
+/* add and remove classes from elements */
+let view = document.querySelector('view');
+
+
+view.classList.add('nameofclass');
+
+view.classList.remove('nameofclass');
+
+view.classList.toggle('nameofclass');/*if its applied , remove or add */
+
+
+/* *************************** */
+h2.addEventListener("click",
+(event)=>{
+    let txt = event.target.textContent;
+    txt === 'my 2nd view'
+        ? (event.target.textContent="clicked")
+        : (event.target.textContent = "my 2nd view");
+},false);
+
+//thre is also events such as "mouseover","mouseout"
+/**////////////////////////////
+document.addEventListener("readystatechange",(event)=>{
+    if (event.target.readyState==='complete'){
+        console.log(`readystate : complete`);
+        initApp();
+    }
+})
+
+const initApp = ()=>{
+ //here we add all the event listeners   
+}
+ /*********************************/
+ let form = view.querySelector('#form');
+
+form.addEventListener("submit",(event)=>{
+    event.preventDefault();//prevent re loading the page when
+    //submitting
+    console.log('submit event');
+})
+ 
+

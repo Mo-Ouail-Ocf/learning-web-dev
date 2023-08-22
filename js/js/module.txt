@@ -1,0 +1,37 @@
+import playGuitar from "./guitar.js";
+import {shred,plucking as hello} from "./guitar.js";
+import User from "./users.js";//no {} cz default
+import * as Guitars from "./guitar.js"
+console.log(Guitars.shred());
+
+let me = new User ("hi@gmail.com","ouail");
+console.log(me);
+
+/*********/
+//better not having default when using *
+const playGuitar = ()=>{
+    return 'plauguitar';
+}
+
+export const shred =()=>{
+    return "shredding";
+}
+
+const plucking =()=>{
+    return "plucking";
+}
+
+export default playGuitar;//only one default export
+//export other functions
+export {plucking};
+/******************/
+export default class User {
+    constructor (email,name){
+        this.id = email;
+        this.name=name;
+    }
+    greeting(){
+        return `hi ,my name is ${this.name}`;
+    }
+}
+/******************/

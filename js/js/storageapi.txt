@@ -1,0 +1,37 @@
+not a part of dom, it refers to the window api;
+available to hs via global variable : window
+
+/* window.sessionStorage :keeps data during the session,
+once we close browser  . data is lost
+window.localStorage :data will be saved in the browser ie persistent
+they only string data ; like working with json 
+*/
+
+let object= {
+    name : "dave",
+    array : ['eat','code','sleep'],
+    logname : function () {
+        console.log(this.name);
+    }
+};
+
+
+
+object.logname();
+
+localStorage.setItem("mylocalStore",JSON.stringify(object));//name of store ; the data
+
+let localdata = JSON.parse(localStorage.getItem("mylocalStore"));
+
+console.log(localdata);
+//also works with string
+
+//delete:
+localStorage.removeItem("mylocalStore");
+
+//or we want to clear:
+localStorage.clear();
+
+/*************************************/
+let key =localStorage.key(0);//return the first key in local storage
+

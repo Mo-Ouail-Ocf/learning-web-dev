@@ -1,0 +1,12 @@
+
+let bool =confirm("Bonjour cava");
+//ok return true , cancel return false
+
+console.log(bool);
+
+let name = prompt("Please enter your name");
+console.log(name.trim() ?? "you didnt enter your name");
+
+//if type of name is null . it shows in the console ...
+
+

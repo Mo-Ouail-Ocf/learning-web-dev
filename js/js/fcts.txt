@@ -1,0 +1,10 @@
+//arrow function
+const getusernamefromemail = (email) => {
+    return email.slice(0,email.indexOf("@"));
+}
+
+const add = (a,b) => {
+    return a+b;
+}
+
+console.log(add(2,3));

@@ -1,0 +1,62 @@
+let obj = {
+    name : "Ouail",
+    age : 19,
+    hobbies : [
+        'math', 'coding','solving problmes'
+    ],
+    beverage : {
+        morning :'coffee',
+        afternoon:'coffe milk'
+    },
+    action : function() {
+        return `time for ${this.beverage.afternoon}`;
+    }
+
+};
+
+console.log(obj);
+/****************/
+const vehicule = {
+    wheels : 4 ,
+    engine : function(){
+        return "vrooom";
+    }
+}
+
+let truck = Object.create(vehicule);
+truck.doors =2;
+truck.engine = function() {
+    return 'whhosh';
+}
+
+console.log(Object.values(vehicule));///or .key
+
+/*************************************/
+const cp = {
+    ana :20,
+    elecf :19.5,
+    arch :19.5
+}
+
+for(let module in cp){
+    console.log(`${module}:${cp[module]}`);
+}
+
+/* delete cp.arch;
+
+let bool = cp.hasOwnProperty("arch")
+
+console.log(bool); //logs false cz we deleted arch
+ */
+//destructing objects:
+
+const  {elecf: module, ana: bien} = cp;
+console.log(module);
+console.log(bien);
+
+const {ana,elecf,arch}=cp;
+
+function hey ({ana}){
+    console.log(ana);
+}
+hey(cp); //destructs that object passes only ana

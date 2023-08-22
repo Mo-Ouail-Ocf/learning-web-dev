@@ -1,0 +1,32 @@
+let array = [];
+
+//add elt
+array.push("ouail");
+array.push("reda");
+
+//pop last item and return that item 
+let x= array.pop();
+
+//add in the begining
+array.unshift("ranya");
+//remove first itme
+array.shift();
+
+//delete
+delete array[1];//first pos will set to empty
+// let  new = array.splice(1);//deletes that second elt and so on
+array.splice(1,2,'ikram','akram');//replace from 1 to 3 by ikram
+
+//reverse
+array.reverse(); //reverses the array
+
+//join
+let string = array.join()
+//string of all elts seperated by ,
+
+newarr = string.split(" ");//gives array of words
+
+//concat
+let y = array.concat(newarr);
+y = [...array,...newarr]; //like concat//without ...
+//we got 2d array

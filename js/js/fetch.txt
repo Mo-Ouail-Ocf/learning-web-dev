@@ -1,0 +1,24 @@
+const request = new Request (url, {
+    //other stuff
+    headers: {
+        Accept:"application/json"//type of return
+    },
+    method:"GET 
+    //for post we need another fields
+})
+
+handling erros
+async getdata {
+try {
+    const response = await fetch(request)
+    const data = await req.json()
+    if (response.status !==200){
+        log('success)
+    else {
+        log('server error',data.error.message)
+    }
+    }
+} catch(error){
+    log('fetch error',error)
+}
+}

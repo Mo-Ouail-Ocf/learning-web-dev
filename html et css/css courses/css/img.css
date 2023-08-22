@@ -1,0 +1,106 @@
+/*Reset*/
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+img{
+    display: block;
+}
+/*End Reset*/
+
+/*Utility classes*/
+.nowrap{
+    white-space: nowrap;    /*space dont break sentences*/ 
+}
+
+.offscreen {
+    position: absolute;
+    left: -10000px;
+}
+/*End Utility classes*/
+
+
+body{
+    font-family: monospace;
+ 
+    min-height: 100vh;
+ 
+    background-color: aliceblue;
+
+    background-image: url('../imgs/bubbles.png'),
+    linear-gradient(to left,steelblue,white);
+    
+    background-repeat: repeat-y,no-repeat;
+/*for the first and the second
+    background-position: right center;
+
+    background-size: 20%,auto; */
+}
+
+.example {
+    margin-top:1rem;
+    padding-left:20px ;
+    border: 1px solid red;
+}
+
+.example img {
+    width: 25%;/*it becomes responsive by applying auto height
+    and width with percentage*/
+    height: auto;
+}
+.profile-pic-figure {
+    width: 35%;
+}
+
+.profile-pic-figure img {
+    width: 100%;
+    height: auto;   
+    min-width: 100px;
+    border: 5px double grey;
+    border-radius: 50%;
+}
+
+.hero {
+    border-bottom:2px solid black ;
+    padding: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 30px;
+    background-color: hsla(0, 0%, 0%, 0.403);
+
+}
+
+.h1{
+    font-size:500%  ;
+    color: aliceblue;
+    text-shadow: 5px 5px 6px black;
+    /*x axes y axes the shadow*/
+    padding: 0.25rem;
+    border-radius: 10px;
+}
+
+.container{
+    background-color: rgb(251,210,156);
+    background-image:url('../imgs/map-2176x1451.png') ;
+    background-repeat: repeat;
+    background-size:cover;
+    background-position: center center;
+}
+
+.clip{
+    font-weight: 800;
+    font-size: 18rem;
+    text-align: center;
+    background-image: url('../imgs/scenic-2200x1331.png');
+    background-size: cover;
+    text-transform: uppercase;
+
+    -webkit-background-clip: text;
+    /*text cover the background*/
+    color: transparent;
+    /*transparency of font makes the background appear*/
+    background-clip:text;
+}

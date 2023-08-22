@@ -1,0 +1,14 @@
+Number(string):return Number
+
+.tofixed(2):return 2 after ,and returns string data
+
+math.pi , math.trunc(math.pi) : 3 , .round same but round
+
+math.ceil/.floor
+
+math.pow(2,4):16
+
+math.min(2,5,9):2 /.max
+
+math.random();
+

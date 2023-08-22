@@ -1,0 +1,32 @@
+-->caracters:
+    [car1car2car3...]
+    [^...]:matches everything expect those caracters
+
+-->range:
+    [a-z]:all lower caracters;[A-Z]:others
+
+-->flags:
+    /g :searches all the text
+        . :everything expect new line car
+        \w:words , all leters without space
+        \W :not a word car
+        \d :digits \D:no digits
+        \s:white space \S:no space 
+        [\s\S]:select everything
+        ^I :evey I in the beggining of lines,with m (multi line flag)
+        d$ :d letters that end the line
+        \. : selects "."
+        (old):Selects old
+        (?:word):groups multiple tokens together without creating a capture group
+        (word) :///and creates a capture group
+        (g(?=old)):look for g followed by = (?! not followed)
+
+-->quantifiers:
+    *:one or more
+        ex :[A-Z][a-z]*'* :zero or more majuscule  followed by lowercase followed by ' (zero or more)
+    \d{3} :select three digits in a row 
+    \d{3,4}:3 up to 4 digits
+    (hear)?t :selects all the Ts and hear before t is optional 
+    h\w+ :picks all letters after h wheras if h\w+? chooses only one letter
+    | : (g|l)ive :pickes give or live
+    \s{2,}:selects places where there is 2 or more white spaces

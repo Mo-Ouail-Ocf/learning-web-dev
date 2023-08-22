@@ -1,0 +1,22 @@
+json: used to send and receive data ,
+it is a text format that is language independent 
+i.e.x it is uded in many languages
+
+const myobj = {
+    name : "ouail",
+    hobbies : ["eat","sleep","code"],
+    hello : function () {
+        console.log("hello");
+    }
+};
+/*
+JSON.stringfy :vice versa to a string or json
+JSON.parse :converts json to an object
+*/
+const sendJson = JSON.stringify(myobj);
+const receiveJSON = JSON.parse(sendJson);
+
+
+
+
+
